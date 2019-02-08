@@ -6,7 +6,7 @@ pausing for the appropriate time between events.
 
 It's defined as an Eclipse/Maven project
 
-##Files 
+## Files 
 CSVReplay implements 'main'
 It creates an instance of a CSVProducer object, then prepares it for multi-threading
 
@@ -23,11 +23,11 @@ It produces a self-executing jar file (The pom.xml includes a reference to <main
 ## How to run it
 use "java jar - StockTickerCSV-0.0.1-SNAPSHOT.jar" to run
 
-Or within Eclipse:
-   Eclipse "External Tool Configuration":
-		Location:			C:\Program Files\Java\jdk1.8.0_201\bin\java.exe
-		Working Directory:	${container_loc}
-		Argument:  			-jar ${resource_loc}
+Or within Eclipse - run as an "External Tool"
+Eclipse "External Tool Configuration":
+Location:|C:\Program Files\Java\jdk1.8.0_201\bin\java.exe
+Working Directory:|${container_loc}
+Argument:|-jar ${resource_loc}
 
 You may need to manually copy resources/stock-trades.csv into the 'target' directory!
 
