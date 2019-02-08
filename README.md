@@ -7,13 +7,21 @@ pausing for the appropriate time between events.
 It's defined as an Eclipse/Maven project
 
 ## Files 
-CSVReplay implements 'main'
+* CSVReplay implements 'main'
+* StockTick.java is nothing more than a Java Class representation of the Event's 'schema type' (see the notes in the file for more details)
+* CSVProducer.java represents an event source and handles the event timings
+
+
 It creates an instance of a CSVProducer object, then prepares it for multi-threading
 
 ## Logging
 Logging is handled by SFJ (Simple Logging for Java) and will be directed to the Console
 (Great article here:  http://www.captaindebug.com/2011/09/adding-slf4j-to-your-maven-project.html#.XFnpyFxKhhE )
-The pom.xml contains two dependency artifacts; slf4j-api (the API) and slf4j-simple (the logger *implementation*)
+The pom.xml contains two dependency artifacts; 
+* slf4j-api (the *API*) 
+* "logback-classic" [ch.qos.logback] (the logger *implementation*)
+Note: that I stopped using the 'slf4j-simple' implementation because it only prints out INFO messages and above
+(no DEBUG, no TRACE) 
 
 ## How to compile it
 Maven 'install' goal will produce a jar, 
