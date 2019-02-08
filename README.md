@@ -25,9 +25,12 @@ use "java jar - StockTickerCSV-0.0.1-SNAPSHOT.jar" to run
 
 Or within Eclipse - run as an "External Tool"
 Eclipse "External Tool Configuration":
-Location:|C:\Program Files\Java\jdk1.8.0_201\bin\java.exe
-Working Directory:|${container_loc}
-Argument:|-jar ${resource_loc}
+
+Property | Value
+-------- | -----
+Location: | C:\Program Files\Java\jdk1.8.0_201\bin\java.exe
+Working Directory: | ${container_loc}
+Argument: | -jar ${resource_loc}
 
 You may need to manually copy resources/stock-trades.csv into the 'target' directory!
 
